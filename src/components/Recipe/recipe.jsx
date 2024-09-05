@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { Table } from "react-bootstrap";
 import CustomTable from "../table/table";
 
 
