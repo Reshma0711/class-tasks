@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 
-const CustomTable = ({ recipes }) => {
+const CustomTable = ({ recipes}) => {
   // Destructure recipes from props
   return (
     <div className="container">

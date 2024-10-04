@@ -11,16 +11,20 @@ import CustomTable from "../table/table";
 const Recipe=()=>{
    
     const [recipes,setrecipes]=useState([])
+    const [query,setQuery]=useState("")
 
     useEffect(()=>{
         fetchData();
-    })
+    },[query])
 
+    const searchHandler=()=>{
+      setQuery(query)
+    }
 
 
   const fetchData = async () => {
     try {
-      let response = await axios.get("https://dummyjson.com/recipes");
+      let response = await axios.get(`https://dummyjson.com/recipes\search=${query}`);
       const  { recipes } = response.data;
       setrecipes(recipes)
       console.log(recipes); 
@@ -36,8 +40,8 @@ const Recipe=()=>{
     return(
         <>
          <h1>Recipe Data</h1>
-        
-           <CustomTable recipes={recipes}/>
+          <input type="text" placeholder="Search Item" onChange={searchHandler}/>
+           <CustomTable recipe={recipes}/>
          
         </>
     )
