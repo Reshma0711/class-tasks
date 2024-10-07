@@ -1,21 +1,17 @@
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import DisplayCard from './components/ppt-task/ppt-task';
-// import CustomCard from './components/cards/customcard';
-import Example from './components/usestate/example1.jsx';
-import Datafetch from './components/apidata/datacard.jsx';
+import Example from './components/useref/example1.jsx';
+
 
 
 
 const App=()=>{
   return(
-   
-    // <DisplayCard/>
-    // <CustomCard/>
-    // <Example/>
-    <Datafetch/>
+  
 
+    <Example/>
+   
   )
 }
 
